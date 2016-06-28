@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+
+<h1>Database Customers</h1>
+{% if all_customers %}
+    <ul>
+        {% for c in all_customers %}
+        <li><a hred="/index/{{ c.id }}/">{{ c }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>You do not have any Customers.</p>
+{% endif %}
+
+<body>
+
+</body>
+</html>
